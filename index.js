@@ -1,14 +1,8 @@
 // Code your solution in this file
-function findMatching(drivers, driverStr) {
-  matchedDrivers = [];
-
-  for (const driver of drivers) {
-    if (driver.toLowerCase() === driverStr.toLowerCase()) {
-      matchedDrivers.push(driver);
-    }
-  }
-
-  return matchedDrivers;
+function findMatching(drivers, name) {
+  return drivers.filter(function (driverName) {
+    return driverName.toLowerCase() === name.toLowerCase();
+  })
 }
 
 function fuzzyMatch(drivers, str) {
