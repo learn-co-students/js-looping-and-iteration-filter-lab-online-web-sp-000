@@ -1,19 +1,20 @@
 // Code your solution in this file
-function findMatching(driversArray, string) {
-  return driversArray.filter(function (driverElement) {
-    return driverElement.toLowerCase() === string.toLowerCase();
-  });
-}
 
-function fuzzyMatch(driversArray, string) {
-  return driversArray.filter (function (driverElement) {
-    return driverElement.slice(0, string.length) === string
+function findMatching(array, string) {
+  return array.filter(function(driver) {
+      return driver.toUpperCase() === string.toUpperCase();
   })
 }
 
-function matchName(driversArray, string) {
-  return driversArray.filter (function (driverElement) {
-    return driverElement.name === string
-    // return driverElement['name'] === string
+function fuzzyMatch(array, string) {
+  return array.filter(function(driver) {
+    // return driver.slice(0, 2) === string.slice();
+    return driver.slice(0, string.length) === string;
+  })
+}
+
+function matchName(array, string) {
+  return array.filter(function(driver) {
+    return driver.name === string;
   })
 }
